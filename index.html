@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circus Charlie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="contenedor-nav">
+            <div>
+                <h1>Circus Charlie</h1>
+            </div>
+        </div>
+    </nav>
+    <div id="contenedor" class="desaparecer">
+        <div id="fondo">
+
+        </div>
+        <div class="parallax-container">
+            <div id="personaje" class="correr"></div>
+        </div>
+        <div class="vida">
+
+        </div>
+        <div class="puntaje">
+
+        </div>
+        <div id="contenedorDistancia">
+
+        </div>
+        <div id="contenedorPlataformaGanar"></div>
+    </div>
+
+    <div class="gameOver desaparecer">
+        <h1>GAME OVER</h1>
+        <p id="puntajeFinalGameOver"></p>
+        <button class="btn-juegoNuevo" >Jugar de nuevo</button>
+    </div>
+
+    <div class="ganar desaparecer">
+        <h1>WINNER</h1>
+        <p id="puntajeFinalWin"></p>
+        <button class="btn-juegoNuevo" >Jugar de nuevo</button>
+    </div>
+
+    <div class="ingreso">
+        <div class="botones-ingreso">
+            <button class="btn btn-primary" type="button control" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Controles</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h1 class="offcanvas-title" id="offcanvasRightLabel">Controles</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="contenedores-comandos">
+                        <img src="imagenes/controles/flecha-arriba.png" alt="" class="flechasControles">
+                        <h3>Saltar</h3>
+                    </div>
+                    <div class="contenedores-comandos">
+                        <img src="imagenes/monkey_01.png" alt="" class="flechasControles">
+                        <h3>Si lo chocas perdes vida</h3>
+                    </div>
+                    
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary" id="jugar">Jugar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>Video juego Interfaces-Tudai 2023</footer>
+    <script src="js/Personaje.js"></script>
+    <script src="js/Acciones.js"></script>
+    <script src="js/Enemigo.js"></script>
+    <script src="js/Bonus.js"></script>
+    <script src="js/Musica.js"></script>
+    <script src="js/Distancia.js"></script>
+    <script src="js/Ganar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

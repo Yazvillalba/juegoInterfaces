@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: black !important;
+}
+
+.contenedor-nav {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    height: 2vh;
+
+}
+
+button {
+    background-color: orangered !important;
+    border-color: red !important;
+    width: 15rem !important;
+    height: 6rem !important;
+    font-size: xxx-large !important;
+    margin-top: 6rem !important;
+    margin-bottom: 12rem !important;
+}
+
+.btn-close {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+}
+.btn-juegoNuevo{
+    width: 373px !important;
+    height: 135px !important;
+    border-radius: 30px;
+}
+
+h1 {
+    font-family: 'Bungee Spice', cursive;
+    text-align: center;
+
+}
+
+footer {
+    font-family: 'Bungee Spice', cursive;
+    text-align: center;
+    height: 10vh;
+}
+
+#contenedor,
+#fondo {
+    height: 90vh;
+    width: 125em;
+    
+}
+
+#contenedor {
+    overflow-y: hidden;
+    overflow-x: hidden;
+   
+}
+
+#fondo {
+    background: url("../imagenes/level2.png") repeat-x;
+    position: absolute;
+    /* z-index: 0; */
+    animation: fondoCircus 5s linear infinite;
+   
+}
+
+@keyframes fondoCircus {
+    0% {
+        background-position: 500px
+    }
+
+    100% {
+        background-position: 0
+    }
+}
+
+
+
+#personaje {
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    position: absolute;
+    bottom: 47vh;
+    margin-left: 40px;
+    background: url("../imagenes/MergedImages2.png");
+    /* background-size: 160px; */
+}
+
+.correr {
+    /* animation: correr .9s steps(8) infinite; */
+    animation: correr .9s steps(3) infinite;
+}
+
+@keyframes correr {
+    0% {
+        background-position: 0
+    }
+
+    100% {
+        background-position: -150px
+    }
+}
+
+
+
+.enemigo {
+    position: absolute;
+    bottom: 47%;
+    width: 50px;
+    height: 50px;
+    background: url(../imagenes/MonosCaminando.png) no-repeat;
+
+    z-index: 1;
+    animation: enemigo 4s forwards linear, correr 1s steps(3) infinite;
+}
+
+
+.saltar {
+
+    animation: saltar 300ms cubic-bezier(0.52, 0, 0.56, 1) forwards;
+
+}
+
+.caer {
+    animation: caer 200ms cubic-bezier(0.52, 0, 0.56, 1) forwards;
+}
+
+@keyframes saltar {
+
+    from {
+        bottom: 50%;
+        background: url("../imagenes/jump_01.png") no-repeat;
+    }
+
+    to {
+        bottom: 65%;
+        background: url("../imagenes/jump_01.png") no-repeat;
+    }
+}
+
+@keyframes caer {
+    from {
+        bottom: 65%;
+    }
+
+    to {
+        bottom: 50%;
+    }
+}
+
+@keyframes enemigo {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+.bonus {
+    position: absolute;
+    bottom: 49%;
+    width: 50px;
+    height: 50px;
+    background: url(../imagenes/monoAzul.png) no-repeat;
+
+    z-index: 1;
+    animation: bonus 2s forwards linear, correr 1s steps(3) infinite;
+}
+
+@keyframes bonus {
+    from {
+        left: 55%;
+    }
+
+    to {
+        left: -5%;
+    }
+}
+
+.monoBonusSalto {
+
+    animation: saltarAzul 600ms cubic-bezier(0.52, 0, 0.56, 1) forwards;
+
+}
+
+.monoBonusCaer {
+    animation: caerAzul 300ms cubic-bezier(0.52, 0, 0.56, 1) forwards;
+}
+
+@keyframes saltarAzul {
+
+    from {
+        bottom: 60%;
+        background: url("../imagenes/cian_monkey_04.png") no-repeat;
+        width: 50px;
+        height: 50px;
+    }
+
+    to {
+        bottom: 80%;
+        width: 50px;
+        height: 50px;
+        background: url("../imagenes/cian_monkey_04.png") no-repeat;
+    }
+}
+
+@keyframes caerAzul {
+    from {
+        bottom: 80%;
+    }
+
+    to {
+        bottom: 60%;
+    }
+}
+
+.perder {
+    animation: perder 300ms cubic-bezier(0.52, 0, 0.56, 1) forwards;
+    background: url("../imagenes/die.png");
+}
+
+@keyframes perder {
+    from {
+        bottom: 60%;
+        background: url("../imagenes/die.png");
+    }
+
+    to {
+        bottom: 10%;
+        background: url("../imagenes/die.png");
+    }
+}
+
+
+.desaparecer {
+    display: none !important;
+}
+
+.botones-ingreso {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.flechasControles {
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.contenedores-comandos {
+    display: flex;
+    align-items: center;
+}
+
+.vida {
+    position: absolute;
+    width: 135px;
+    height: 142px;
+    top: 80px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.438);
+    background: url("../imagenes/vidasJuego.png") no-repeat;
+     background-size: 135px 100px; 
+  
+}
+
+
+.dosVidas{
+    position: absolute;
+    width: 137px;
+    height: 76px;
+    top: 80px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.438);
+    background: url("../imagenes/dosVidas.png") no-repeat;
+    background-size: 89px 100px;
+
+
+}
+.unaVida{
+    position: absolute;
+    width: 137px;
+    height: 76px;
+    top: 80px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.438);
+    background: url("../imagenes/unaVida.png") no-repeat;
+    background-size: 41px 100px;
+}
+.gameOver{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+/* DISTANCIA */
+.distancia{
+    position: absolute;
+    margin-top: 32%;
+    width: 120px;
+    height: 45px;
+    animation: distancias 14s forwards linear;
+    background-size: 120px 100%;
+
+}
+
+@keyframes distancias {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+/* PLATAFORMA GANAR */
+.ganar{
+    margin-top: 50px;
+
+}
+.plataformaGanar{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background: url("../imagenes/highplatform.png");
+    background-size: 100px 100%;
+    margin-top: 20%;
+
+    animation: distancias 14s forwards linear;
+
+}
